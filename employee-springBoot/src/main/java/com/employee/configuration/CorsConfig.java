@@ -14,7 +14,9 @@ public class CorsConfig {
     public CorsFilter corsFilter(){
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowCredentials(true);
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", // local
+                "https://full-stack-employee-project-production.up.railway.app" // production
+                ));
         configuration.setAllowedHeaders(Arrays.asList("Origin",
                 "Access-Control-Allow-Origin",
                 "Accept",
